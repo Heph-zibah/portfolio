@@ -40,7 +40,7 @@ onMounted(() => {
                 <button @click="isToggle()"> <i :class="isDark ? 'fa-regular fa-lightbulb text-2xl p-2 dark:text-white' : 'fa-solid fa-lightbulb text-2xl p-2 dark:text-white'"></i></button>
                 <i class="md:hidden" :class="isNavbar ? 'fa-solid fa-xmark text-2xl p-2 dark:text-white navbar' : 'fa-solid fa-bars text-2xl p-2 dark:text-white'" @click="isToggleNavbar"></i>
                 <div class="rounded-full bg-white py-3.5 px-10 hidden md:block font-semibold" :class="isDark? 'border-0' : 'border border-black'">
-                    <button>Get in touch</button>
+                    <button>Hire me</button>
                 </div>
             </div>
         </nav>
