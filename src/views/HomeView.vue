@@ -6,11 +6,11 @@ import VueTypewriterEffect from "vue-typewriter-effect";
 
 <template>
     <page-layout>
-        <section class="max-w-[1200px] mx-auto h-full text-center py-10 md:py-20 md:shadow-xl md:rounded-2xl px-5 text-[#A7A59C] dark:text-[ #D4D4D4] global__border">
+        <section class="max-w-[1200px] mx-auto h-full text-center py-10 2xl:py-20 md:shadow-lg md:rounded-2xl px-5 text-[#A7A59C] dark:text-[ #D4D4D4] global__border">
 
          <div class="flex flex-col gap-3 ">
             <span class=" text-lg ">Hey there, my name is</span>
-            <h1 class="dark:text-[#FFFFFF] text-5xl md:text-7xl primary__text font-semibold">OLUWATOSIN DARAMOLA</h1>
+            <h1 class="dark:text-[#FFFFFF] text-3xl md:text-5xl 2xl:text-7xl primary__text font-semibold">OLUWATOSIN DARAMOLA</h1>
             <p class=" text-3xl primary__text">I am a <vue-typewriter-effect :strings="['Vue.JS Frontend Developer']" cursorClassName="text-white" /></p>
             <p class="max-w-4xl mx-auto text-[#353431] dark:text-[#cecbc8] md:text-lg">I'm a passionate frontend developer with experience in creating beautiful and functional web applications. I specialize in building responsive, accessible, and user-friendly interfaces using modern technologies like Vue.js, 
     Tailwind CSS, and JavaScript. My goal is to turn ideas into digital experiences that make a positive impact.</p>
