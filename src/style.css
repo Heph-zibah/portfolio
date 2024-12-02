@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .center__vertical {
+  @apply flex items-center;
+}
+.global__border{
+  @apply border border-[#E0E0E0] dark:border-[#3A3A3A]
+}
+.primary__text{
+ @apply text-[#3E3A33] dark:text-[#FFFFFF]
+}
+.nav__hover{
+@apply  hover:text-[#8C8779] hover:dark:text-[#D4D4D4]
+}
+
+.transition__out{
+ @apply transition-all duration-700 ease-in-out transform
+}
+}

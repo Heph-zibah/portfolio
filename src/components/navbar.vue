@@ -1,6 +1,10 @@
 <script setup>
 import {useDark, useToggle} from '@vueuse/core'
 import {ref, onMounted} from 'vue'
+import MobileNavbar from '../components/mobileNavbar.vue';
+import { useRoute } from 'vue-router'
+import { navLinks } from '../stores/links';
+const route = useRoute()
 
 const isDark = useDark();
 const isToggle = useToggle(isDark);
@@ -18,85 +22,38 @@ const handleClickOutside = (event) => {
   }
 };
 
+
 onMounted(() => {
   document.addEventListener('click', handleClickOutside);
 });
 </script>
 
 <template>
-    <header class=" px-5 md:px-14 py-10   w-full" >
-        <nav class="flex items-center justify-between">
-            <img src="/src/assets/cropped-logo.png" alt="" class="w-28" v-if="!isDark">
-            <img src="/src/assets/black-logo.png" alt="" class="w-28" v-if="isDark">
-            <ul class="md:flex  hidden gap-12 items-center border border-gray-400 rounded-full px-4 py-3 dark:text-[#868C98] dark:bg-white dark:bg-opacity-10">
-                <li>Home</li>
-                <li>About</li>
-                <li>Resume</li>
-                <li>Portfolio</li>
-                <li>Contact</li>
-                <li>Blog</li>     
+    <header class=" px-5 lg:px-14 py-5 w-full absolute top-0 " >
+        <nav class="flex items-center justify-between max-w-[1200px] mx-auto">
+            <router-link to="/">
+                <img src="/src/assets/cropped-logo.png" alt="" class="w-28 lg:w-48" v-if="!isDark">
+                <img src="/src/assets/black-logo.png" alt="" class="w-28 lg:w-48" v-if="isDark">
+            </router-link>
+            <ul class="md:flex  hidden gap-6 lg:gap-12 items-center global__border rounded-full px-2 lg:px-4 py-3 text-[#8C8779] dark:text-[#A6A6A6] " >
+                <li v-for="(link) in navLinks" :key="link.name">
+                    <router-link
+                        class="font-bold nav__hover cursor-pointer "
+                        :to="link.route"
+                        :class="{ 'text-[#3E3A33] dark:text-[#FFFFFF] ': route.name === link.route?.name }">
+                        {{ link.name }}
+                    </router-link>
+                </li>
+                <li><a href="https://medium.com/@oadaramola" class="font-bold nav__hover cursor-pointer text-[#8C8779] dark:text-[#A6A6A6]">BLOG</a></li>
             </ul>
-            <div class="flex items-center gap-5">
-                <button @click="isToggle()"> <i :class="isDark ? 'fa-regular fa-lightbulb text-2xl p-2 dark:text-white' : 'fa-solid fa-lightbulb text-2xl p-2 dark:text-white'"></i></button>
-                <i class="md:hidden" :class="isNavbar ? 'fa-solid fa-xmark text-2xl p-2 dark:text-white navbar' : 'fa-solid fa-bars text-2xl p-2 dark:text-white'" @click="isToggleNavbar"></i>
-                <div class="rounded-full bg-white py-3.5 px-10 hidden md:block font-semibold" :class="isDark? 'border-0' : 'border border-black'">
-                    <button>Hire me</button>
-                </div>
+            <div class="flex items-center gap-3 lg:gap-5">
+                <button @click="isToggle()"> <i class="nav__hover text-2xl" :class="isDark ? 'fa-regular fa-lightbulb p-2 dark:text-[#FFFFFF]' : 'fa-solid fa-lightbulb p-2 dark:text-[#FFFFFF]'"></i></button>
+                <router-link :to="{name: 'contact'}"  class="rounded-full bg-[#FFD7A8] dark:bg-[#FF7A59] text-[#3E3A33] dark:text-[#1E1E1E] hover:bg-[#F4A7A3] dark:hover:bg-[#FF5722] hover:text-[#FFFFFF] dark:hover:text-[#FFFFFF] py-2.5 lg:py-3.5 px-5 text-nowrap md:px-10  font-semibold" :class="isDark? 'border border-[#3A3A3A]' : 'border border-[#E0E0E0]'">
+                    Hire me
+                </router-link>
+                <i class="md:hidden text-2xl" :class="isNavbar ? 'fa-solid fa-xmark p-2 dark:text-[#FFFFFF] navbar' : 'fa-solid fa-bars p-2 dark:text-[#FFFFFF]'" @click="isToggleNavbar"></i>
             </div>
         </nav>
-        <div class="w-full h-full fixed left-0 top-0  max-h-full bg-black dark:bg-white bg-opacity-40 dark:bg-opacity-70" v-if="isNavbar">
-            <div class="w-[50%]">
-                <div class="bg-black dark:bg-white h-screen dark:text-black text-xs pt-14 z-[1000]">
-                    
-                    <div class=" py-6 text-white space-y-3">
-                        <div class="flex items-center gap-5 px-5 py-2 hover:bg-gray-900 cursor-pointer dark:text-black">
-                            <i class="fa-solid fa-house-signal"></i>
-                            <span>HOME</span>
-                        </div>
-                        <div class="flex items-center gap-5 px-5 py-2 hover:bg-gray-900 cursor-pointer dark:text-black">
-                            <i class="fa-regular fa-user"></i>
-                            <span>ABOUT</span>
-                        </div>
-                        <div class="flex items-center gap-5 px-5 py-2 hover:bg-gray-900 cursor-pointer dark:text-black">
-                            <i class="fa-regular fa-id-card"></i>
-                            <span>RESUME</span>
-                        </div>
-                        <div class="flex items-center gap-5 px-5 py-2 hover:bg-gray-900 cursor-pointer dark:text-black">
-                            <i class="fa-solid fa-business-time"></i>
-                            <span>PORTFOLIO</span>
-                        </div>
-                        <div class="flex items-center gap-5 px-5 py-2 hover:bg-gray-900 cursor-pointer dark:text-black">
-                            <i class="fa-regular fa-envelope"></i>
-                            <span>CONTACT</span>
-                        </div>
-                        <div class="flex items-center gap-5 px-5 py-2 hover:bg-gray-900 cursor-pointer dark:text-black">
-                            <i class="fa-solid fa-file-signature"></i>
-                            <span>BLOG</span>
-                        </div>
-                        
-                    </div>
-                    <div class="px-5 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <a class="p-1 hover:scale-125 transition-all duration-500" href="https://github.com/Heph-zibah">
-                                <i class="fa-brands text-white dark:text-black fa-github"></i>
-                            </a>
-                            <a class="p-1 hover:scale-125 transition-all duration-500" href="">
-                                <i class="fa-brands text-white dark:text-black fa-medium"></i>
-                            </a>
-                            <a class="p-1 hover:scale-125 transition-all duration-500" href="">
-                                <i class="fa-brands text-white dark:text-black fa-x-twitter"></i>
-                            </a>
-                            <a class="p-1 hover:scale-125 transition-all duration-500" href="">
-                                <i class="fa-brands text-white dark:text-black fa-linkedin-in"></i>
-                            </a>
-                            <a class="p-1 hover:scale-125 transition-all duration-500" href="">
-                                <i class="fa-brands text-white dark:text-black fa-facebook-f"></i>
-                            </a>
-                        </div>
-                        <p class="text-xs text-white dark:text-black">2024 © oadaramola.All Right Reserved.</p>
-                    </div>
-            </div>
-            </div>
-        </div>
     </header>
+    <MobileNavbar v-if="isNavbar" />
 </template>
