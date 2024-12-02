@@ -2,6 +2,7 @@
 import Home from './views/HomeView.vue';
 import { useColorMode } from '@vueuse/core'
 import { onBeforeMount, ref } from 'vue'
+import Water from './components/water.vue';
 
 const mode = useColorMode()
 
@@ -16,6 +17,7 @@ onBeforeMount(() => {
 <div>
     
     <router-view/>
+    <!-- <Water/> -->
 </div>
 </template>
 
