@@ -1,20 +1,51 @@
 <script setup>
-import Navbar from '../components/navbar.vue';
-import VueTypewriterEffect from "vue-typewriter-effect";
-// import MobileNavbar from '../components/mobileNavbar.vue';
+import { ref } from "vue";
+import PageLayout from "../layouts/PageLayout.vue";
+
 </script>
 
 <template>
-    <Navbar/>
-    <!-- <MobileNavbar/> -->
-    <main class=" h-screen dark:text-white py-20 md:py-40">
-       <h1> About</h1>
-        <!-- <section class="flex items-center justify-between px-5 md:px-14 py-5 bg-black bg-opacity-10 dark:bg-white dark:bg-opacity-10">
-            <img src="../assets/HTML.png" alt="">
-            <img src="../assets/CSS.png" alt="">
-            <img src="../assets/Javascript.png" alt="">
-            <img src="../assets/Tailwind.png" alt="" class="w-10">
-            <img src="../assets/Vue.png" alt="">
-        </section> -->
-    </main>
+    <page-layout>
+        <section class="max-w-[1200px] mx-auto h-full  py-10 md:py-20">
+           <div class="flex flex-col md:flex-row">
+                <div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <div class="flex flex-col gap-1">
+                            <span>Phone</span>
+                            <span>(+234) 813 730 2432</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-regular fa-envelope"></i>
+                        <div class="flex flex-col gap-1">
+                            <span>Email</span>
+                            <span>oluwatosindaramola07@gmail.com</span>
+                        </div>
+                    </div >
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="flex flex-col gap-1">
+                            <span>Location</span>
+                            <span>Remote</span>
+                        </div>
+                    </div>
+                </div>
+                <form action="">
+                    <h4>Let's work together</h4>
+                    <div class="flex items-center">
+                        <input type="text" placeholder="First name">
+                        <input type="text" placeholder="Last name">
+                    </div>
+                    <div class="flex flex-col">
+                        <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Phone number">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Please type your message here"></textarea>
+                    </div>
+                </form>
+           </div>
+        
+       </section>
+       
+    </page-layout>
 </template>
