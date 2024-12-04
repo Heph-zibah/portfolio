@@ -19,7 +19,7 @@ import {contactData} from "../stores/links"
                         </div>
                     </div>
                 </div>
-                <form action="" class="p-5 bg-[#ffff] rounded-lg shadow-lg drop-shadow-lg space-y-5 global__border">
+                <form action="" class="p-5 bg-[#ffff] dark:bg-[#292929]  rounded-lg shadow-lg drop-shadow-lg space-y-5 global__border">
                     <h4 class="font-semibold text-3xl">Let's work together</h4>
                   
                     <div class="grid grid-cols-2 items-center gap-3 w-fit">
