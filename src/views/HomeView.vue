@@ -19,7 +19,7 @@ import water from "../components/water.vue";
 
          <div class="flex flex-col  md:flex-row gap-10 md:gap-20 max-w-[760px] mx-auto mt-10">
             
-            <a class="rounded-full bg-[#FFD7A8] dark:bg-[#FF7A59] text-[#3E3A33] dark:text-[#1E1E1E] hover:bg-[#F4A7A3] dark:hover:bg-[#FF5722] hover:text-[#FFFFFF] dark:hover:text-[#FFFFFF] py-2.5 md:py-3.5 px-5 text-nowrap md:px-10  font-semibold" href="/oluwatosin_daramola_cv.pdf" download="" >Download CV</a>
+            <a class="global__button" href="/oluwatosin_daramola_cv.pdf" download="" >Download CV</a>
             <div class="flex flex-wrap items-center justify-between gap-5 md:gap-10">
                 <a class="p-2 hover:scale-125 transition-all duration-500 text-2xl text-[#7b2691] dark:text-[#be69d3]" href="https://github.com/Heph-zibah">
                     <i class="fa-brands fa-github"></i>

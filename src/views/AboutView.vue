@@ -18,7 +18,7 @@ const activeTab = ref(tabs[0].name);
 
 <template>
     <page-layout>
-        <section class="max-w-[1200px] mx-auto h-full px-5 py-10 md:py-0">
+        <section class="max-w-[1200px] mx-auto h-full px-5 py-10 md:py-0 md:pb-10">
             <h1 class="  text-3xl  primary__text font-semibold tracking-tight ">Why hire me?</h1>
             <p class="md:shadow-lg md:drop-shadow-sm md:global__border md:rounded-lg md:p-3 my-5">
                 I’m a Frontend Developer specializing in Vue.js, with a passion for crafting clean, responsive, and user-friendly interfaces. My skills in problem-solving and efficient coding ensure I deliver high-quality results that align with your vision.
