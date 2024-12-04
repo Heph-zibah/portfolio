@@ -1,3 +1,10 @@
+import ticketsio from "@/assets/ticketsio.png";
+import educatorPortfolio from "@/assets/educator portfolio.png";
+import spaceTourism from "@/assets/space-tourism.png";
+import tourismSite from "@/assets/tourism-site.png";
+import sneakersEcommerce from "@/assets/sneakers-ecommerce.png";
+import weatherApp from "@/assets/weather-app.png";
+
 export const navLinks = [
   {
     icon: "fa-solid fa-house-signal",
@@ -59,7 +66,7 @@ export const aboutData = [
 export const projectData = [
   {
     id: 1,
-    image: "/src/assets/ticketsio.png",
+    image: ticketsio,
     name: "Frontend Project",
     description:
       "The UI/UX team created the design of this website. I designed the website utilizing the mobile first strategy, however it has no functionality or pages.",
@@ -77,8 +84,8 @@ export const projectData = [
     },
   },
   {
-    id: 1,
-    image: "/src/assets/educator portfolio.png",
+    id: 2,
+    image: educatorPortfolio,
     name: "Frontend Project",
     description:
       "The UI/UX team created the design of this website. I designed the website utilizing the mobile first strategy, however it has no functionality or pages.",
@@ -96,8 +103,8 @@ export const projectData = [
     },
   },
   {
-    id: 1,
-    image: "/src/assets/space-tourism.png",
+    id: 3,
+    image: spaceTourism,
     name: "Frontend Project",
     description:
       "The UI/UX team created the design of this website. I designed the website utilizing the mobile first strategy, however it has no functionality or pages.",
@@ -115,8 +122,8 @@ export const projectData = [
     },
   },
   {
-    id: 1,
-    image: "/src/assets/tourism-site.png",
+    id: 4,
+    image: tourismSite,
     name: "Frontend Project",
     description:
       "The UI/UX team created the design of this website. I designed the website utilizing the mobile first strategy, however it has no functionality or pages.",
@@ -134,8 +141,8 @@ export const projectData = [
     },
   },
   {
-    id: 1,
-    image: "/src/assets/sneakers-ecommerce.png",
+    id: 5,
+    image: sneakersEcommerce,
     name: "Frontend Project",
     description:
       "The UI/UX team created the design of this website. I designed the website utilizing the mobile first strategy, however it has no functionality or pages.",
@@ -153,8 +160,8 @@ export const projectData = [
     },
   },
   {
-    id: 1,
-    image: "/src/assets/weather-app.png",
+    id: 6,
+    image: weatherApp,
     name: "Frontend Project",
     description:
       "The UI/UX team created the design of this website. I designed the website utilizing the mobile first strategy, however it has no functionality or pages.",
