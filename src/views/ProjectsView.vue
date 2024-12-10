@@ -7,16 +7,16 @@ import { projectData } from "../stores/links";
 
 <template>
     <page-layout>
-        <section class="max-w-[1200px] mx-auto h-full  py-10 md:py-0 px-5 md:px-0">
+        <section class="max-w-[1200px] mx-auto h-full  py-10 md:py-0 px-5 md:pb-16">
             <h1 class="text-center font-bold text-3xl mb-6">My projects</h1>
            <div class="flex flex-col gap-10">
              <div  v-for="project in projectData" :key="project.id">
                 <div class="flex flex-col lg:flex-row justify-between gap-10 global__border rounded-lg">
-                    <div class="border-b lg:border-b-[#E0E0E0] lg:dark:border-b-[#3A3A3A] lg:border-r lg:border-r-[#E0E0E0] lg:dark:border-r-[#3A3A3A] p-4 lg:w-1/2">
-                        <img :src="project.image" alt="" class="rounded-3xl">
+                    <div class="border-b border-b-[#E0E0E0] dark:border-b-[#3A3A3A] lg:border-b-0 lg:border-r lg:border-r-[#E0E0E0] lg:dark:border-r-[#3A3A3A] p-4  lg:w-1/2 ">
+                        <img :src="project.image" alt="" class="rounded-3xl h-full object-center">
                     </div>
                     <div class="p-4 lg:w-1/2">
-                        <div class=" border-b border-b-[#E0E0E0] dark:border-b-[#3A3A3A] pb-3 font-bold text-3xl">
+                        <div class=" border-b border-b-[#E0E0E0] dark:border-b-[#3A3A3A] pb-3 font-bold text-xl md:text-3xl space-y-2">
                             <p> {{project.id < 10 ? `0${project.id}` : project.id}}</p>
                             <p>{{project.name}}</p>
                        </div>

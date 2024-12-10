@@ -12,6 +12,7 @@
     "@vueuse/core": "^10.11.0",
     "oh-vue-icons": "^1.0.0-rc3",
     "vue": "^3.4.29",
+    "vue-element-loading": "^3.0.1",
     "vue-router": "^4.5.0",
     "vue-typewriter-effect": "^1.0.1"
   },

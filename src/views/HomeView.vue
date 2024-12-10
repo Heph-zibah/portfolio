@@ -1,11 +1,11 @@
 <script setup>
 import PageLayout from "../layouts/PageLayout.vue";
 import VueTypewriterEffect from "vue-typewriter-effect";
-// import MobileNavbar from '../components/mobileNavbar.vue';
-import water from "../components/water.vue";
+ import LoadingComponents from "../components/loadingComponents.vue";
 </script>
 
 <template>
+    <loading-components :is-loading="isLoading" />
     <page-layout>
         <section class=" md:max-w-[769px] lg:max-w-[1200px] mx-auto h-full text-center py-10 md:py-16 2xl:py-20 md:shadow-lg md:rounded-2xl px-5 text-[#A7A59C] dark:text-[ #D4D4D4] global__border">
 

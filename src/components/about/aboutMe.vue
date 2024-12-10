@@ -1,40 +1,13 @@
 <script setup>
-import { ref } from 'vue';
-// import { aboutData } from '../../stores/links';
+import { aboutData } from '../../stores/links';
 
- const aboutData = ref([
-  {
-    label: "Name",
-    name: "Oluwatosin Abigail Daramola",
-  },
-  {
-    label: "Phone",
-    name: "(+234) 813 730 2432",
-  },
-  {
-    label: "Experience",
-    name: "2 + years",
-  },
-  {
-    label: "Nationality",
-    name: "Nigerian",
-  },
-  {
-    label: "Email",
-    name: "oluwatosindaramola07@gmail.com",
-  },
-  {
-    label: "Freelance",
-    name: "Available",
-  },
-]);
+
 </script>
 
 <template>
    <section class="md:shadow-lg md:p-6 md:rounded-lg md:global__border md:dark:bg-[#292929]">
         <h3 class="md:text-center font-bold text-2xl">About me</h3>
-        <p class="my-3">I am a Frontend Developer with hands-on experience building dynamic, responsive, and user-focused applications using Vue.js and modern JavaScript frameworks. My projects include creating multi-step forms, implementing real-time validation, and integrating APIs for seamless interactivity.
-        I thrive on solving problems, collaborating with teams, and delivering high-quality results tailored to clients' needs.</p>
+        <p class="my-3">"I am a passionate Frontend Developer with hands-on experience in building dynamic, responsive, and user-centric applications using Vue.js and modern JavaScript frameworks. I specialize in developing complex features such as multi-step forms, real-time validation, and seamless API integrations to enhance user experience and interactivity.</p>
         <div class="scroll-container">
             
             <div v-for="about in aboutData" :key="about.name" class="flex items-center gap-3 border-b border-b-[#E0E0E0] dark:border-b-[#3A3A3A] pt-8 pb-1">
@@ -45,7 +18,9 @@ import { ref } from 'vue';
    </section>
 </template>
 <style scoped>
-.scroll-container {
+
+@media  screen and (min-width:600px) {
+  .scroll-container {
   max-height: 10rem; /* Limit the height */
   overflow-y: auto; /* Add vertical scrolling */
   padding: 0.5rem; /* Add some spacing */
@@ -71,4 +46,6 @@ import { ref } from 'vue';
 .scroll-container::-webkit-scrollbar-thumb:hover {
   background: #45a045; /* Darker color on hover */
 }
+}
+
 </style>
