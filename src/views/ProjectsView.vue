@@ -7,7 +7,7 @@ import { projectData } from "../stores/links";
 
 <template>
     <page-layout>
-        <section class="max-w-[1200px] mx-auto h-full  py-10 md:py-0 px-5 md:pb-16">
+        <section class="max-w-[1200px] mx-auto h-full  py-10 md:pt-0 px-5 md:pb-16">
             <h1 class="text-center font-bold text-3xl mb-6">My projects</h1>
            <div class="flex flex-col gap-10">
              <div  v-for="project in projectData" :key="project.id">

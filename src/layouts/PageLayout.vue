@@ -4,7 +4,7 @@ import Navbar from '../components/navbar.vue';
 
 <template>
     <Navbar/>
-    <main class="primary__text pt-5 md:pt-24 xl:pt-28 2xl:pt-40">
+    <main class="primary__text pt-5 md:pt-24  2xl:pt-40">
         <slot/>
     </main>
 </template>

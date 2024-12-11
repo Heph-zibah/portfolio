@@ -7,7 +7,7 @@ import VueTypewriterEffect from "vue-typewriter-effect";
 <template>
     <loading-components :is-loading="isLoading" />
     <page-layout>
-        <section class=" md:max-w-[769px] lg:max-w-[1200px] mx-auto text-center py-10 md:py-16 2xl:py-20 md:shadow-lg md:rounded-2xl px-5 text-[#A7A59C] dark:text-[#D4D4D4] global__border bg-dual-pattern bg-full-cover h-screen-full bg-no-repeat bg-custom-right ">
+        <section class=" md:max-w-[769px] lg:max-w-[1200px] mx-auto text-center py-10 md:py-16 2xl:py-20 md:shadow-lg md:rounded-2xl px-5 text-[#A7A59C] dark:text-[#D4D4D4] global__border animated-bg ">
 
          <div class="flex flex-col gap-3 ">
             <span class=" text-lg ">Hey there, my name is</span>
@@ -76,8 +76,10 @@ import VueTypewriterEffect from "vue-typewriter-effect";
 }
 
 .animated-bg {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400"><g fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"><circle cx="200" cy="200" r="50"/><circle cx="200" cy="200" r="100"/><circle cx="200" cy="200" r="150"/><circle cx="200" cy="200" r="200"/></g></svg>') no-repeat center;
-  background-size: cover;
-  height: 100%; /* Adjust height as needed */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400"><g fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"><circle cx="200" cy="200" r="50"/><circle cx="200" cy="200" r="100"/><circle cx="200" cy="200" r="150"/><circle cx="200" cy="200" r="200"/></g></svg>'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400"><g fill="none" stroke="rgba(58,58,58,0.1)" stroke-width="1"><circle cx="200" cy="200" r="50"/><circle cx="200" cy="200" r="100"/><circle cx="200" cy="200" r="150"/><circle cx="200" cy="200" r="200"/></g></svg>');
+  background-size: 30%;
+  background-position: right 272%  ;
+  background-repeat: no-repeat;
+  height: 50%; /* Adjust height as needed */
 }
 </style>
