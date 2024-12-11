@@ -29,7 +29,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <header class=" px-5 lg:px-14 py-2 w-full fixed top-0 backdrop-blur-xl z-50" >
+    <header class=" px-5 lg:px-14 py-2 w-full md:fixed md:top-0 backdrop-blur-xl z-50" >
         <nav class="flex items-center justify-between max-w-[1200px] mx-auto">
             <router-link to="/">
                 <img src="/src/assets/cropped-logo.png" alt="" class="w-28 lg:w-48" v-if="!isDark">

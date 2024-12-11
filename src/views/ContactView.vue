@@ -8,10 +8,10 @@ import {contactData} from "../stores/links"
 
 <template>
     <page-layout>
-        <section class="max-w-[1200px] mx-auto h-full py-10 md:py-0 px-5">
+        <section class="max-w-[960px] mx-auto h-full py-10 md:py-0 px-5">
            <div class="flex flex-col md:flex-row items-center justify-between gap-y-8">
                 <div  class="flex flex-col gap-3">
-                    <div v-for="contact in contactData" :key="contact.label" class="flex items-center gap-3 ">
+                    <div v-for="contact in contactData" :key="contact.label" class="flex items-center gap-3 text-lg ">
                         <i :class="contact.icon" class="font-extrabold"></i>
                         <div class="flex flex-col gap-1">
                             <span class="font-medium text-[#8b867e]">{{contact.label}}</span>

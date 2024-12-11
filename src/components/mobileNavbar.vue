@@ -8,7 +8,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="md:hidden mt-20 py-5 transition__out opacity-100 max-h-[700px] shadow-lg  overflow-hidden w-full block mx-auto primary__text">
+  <div class="md:hidden py-5 transition__out opacity-100 max-h-[700px] shadow-lg  overflow-hidden w-full block mx-auto primary__text">
     <ul >
       <li v-for="(link) in navLinks" :key="link.name">
           <router-link
